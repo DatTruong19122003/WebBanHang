@@ -1,0 +1,110 @@
+
+.table-infoo .container{
+    height: fit-content;
+    background-color: white;
+    border: solid 2px #a54fa8;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #719ECE;
+}
+.table-infoo .container .row{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+}
+.table-infoo .container .row .baner{
+    height: 100%;
+}
+.table-infoo .container .row .baner .content{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.table-infoo .container .row .baner .content h4{
+    font-weight: 700;
+    color: #a54fa8;
+}
+.table-infoo .container .row .baner .content .avt{
+    margin: 0 auto;
+    width: 80%;
+}
+.table-infoo .container .row .baner .content .avt img{
+    width: 80%;
+    border-radius: 50%;
+    border: solid 5px #a54fa8;
+    box-shadow: 0 0 10px 3px #719ECE;
+}
+.table-infoo .container .row .baner .content .name{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.table-infoo .container .row .baner .content button{
+    margin: 0 auto;
+    color: #a54fa8;
+    border: solid 1px #a54fa8;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+    background-color: Transparent;
+    display: block;
+}
+.table-infoo .container .row .baner .content button:hover{
+    background-color: #a54fa8;
+    color: white;
+}
+.table-infoo .container .row .baner .verticalLine{
+    width: 2px;
+    background-color: #a54fa8;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+
+.table-infoo .container .row .info-form{
+    height: 100%;
+}
+.table-infoo .container .row .info-form .content{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.table-infoo .container .row .info-form .content h4{
+    font-weight: 700;
+    color: #a54fa8;
+}
+.table-infoo .container .row .info-form .content .info input{
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.table-infoo .container .row .info-form .content .update button{
+    color: #a54fa8;
+    border: solid 1px #a54fa8;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+    background-color: Transparent;
+}
+.table-infoo .container .row .info-form .content .update button:hover{
+    background-color: #a54fa8;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .update{
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    .table-infoo .container .row .baner .verticalLine{
+        width: 90%;
+        height: 2px;
+        top: 100%;
+        left: 8%;
+        margin-top: 1rem;
+    }
+    .table-infoo .container .row .info-form{
+        margin-top: 2rem;
+    }
+}

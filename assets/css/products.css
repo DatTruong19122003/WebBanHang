@@ -1,0 +1,73 @@
+.content .container h3{
+    color: #a54fa8;
+    padding-left: 2rem;
+    font-weight: 700;
+}
+.content .container .line{
+    height: 3px;
+    width: 23%;
+    background-color: #a54fa8;
+}
+.content .container .products .sanPham{
+    height: fit-content;
+}
+.content .container .products .sanPham a{
+    color: black;
+}
+.content .container .products .sanPham .nd-sp{
+    background-color: white;
+    padding: 0 0 2rem;
+    border: solid 1px #a54fa8;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+}
+.content .container .products .sanPham .nd-sp:hover{
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #a54fa8;
+    color: #a54fa8;
+}
+.content .container .products .sanPham .nd-sp .img-sp{
+    width: 95%;
+    margin: 0 auto;
+}
+.content .container .products .sanPham .nd-sp .img-sp img{
+    width: 100%;
+}
+.content .container .products .sanPham .nd-sp .info-sp p{
+    margin: 0.5rem 0;
+}
+.content .container .products .sanPham .nd-sp .info-sp .name{
+    font-weight: 600;
+}
+.content .container .products .sanPham button{
+    margin: 0 auto;
+    color: #a54fa8;
+    border: solid 1px #a54fa8;
+    padding: 5px 15px;
+    border-radius: 0.5rem;
+    background-color: Transparent;
+    display: block;
+}
+.content .container .products .sanPham button:hover{
+    background-color: #a54fa8;
+    color: white;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+    .content .container h3{
+        text-align: center;
+        padding-left: 0;
+    }
+    .content .container .line{
+        margin: 0 auto;
+        height: 3px;
+        width: 25%;
+        background-color: #a54fa8;
+    }
+}

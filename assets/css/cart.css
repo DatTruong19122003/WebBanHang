@@ -1,0 +1,156 @@
+.text-right{
+    text-align: right;
+}
+.content .container{
+    height: fit-content;
+}
+.content .container h3{
+    color: #a54fa8;
+    padding-left: 2rem;
+    font-weight: 600;
+}
+.content .container .line{
+    height: 3px;
+    width: 23%;
+    background-color: #a54fa8;
+}
+.content .container .cart{
+    width: 100%;
+    height: fit-content;
+}
+.content .container .cart .info-sp .table .table-show{
+    width: 100%;
+}
+.content .container .cart .info-sp .table .table-show tr .text{
+    padding-top: 2.5rem;
+}
+.content .container .cart .info-sp .table .table-show tr .text-btn{
+    padding-top: 2.1rem;
+}
+.content .container .cart .info-sp .table .table-show tr .text-btn-count{
+    padding-top: 2.1rem;
+}
+@media (max-width: 767px) {
+    .content .container .cart .info-sp .table{
+        font-size: 50%;
+    }
+    .content .container .cart .info-sp .table button{
+        font-size: 70%;
+    }
+    .content .container .cart .info-sp .table .table-show tr img{
+        width: 50px!important;
+    }
+    .content .container .cart .info-sp .table .table-show tr td input{
+        width: fit-content;
+    }
+    .content .container .cart .info-sp .table .table-show tr .text{
+        padding-top: 1.5rem;
+    }
+    .content .container .cart .info-sp .table .table-show tr .text-btn{
+        padding-top: 1.1rem;
+    }
+    .content .container .cart .info-sp .table .table-show tr .text-btn-count{
+        padding-top: 1.1rem;
+    }
+}
+@media (max-width: 391px) {
+    .content .container .cart .info-sp .table .table-show tr .text-btn{
+        padding-top: 1.5rem;
+    }
+    .content .container .cart .info-sp .table .table-show tr .text-btn-count{
+        padding-top: 0.5rem;
+    }
+}
+
+.content .container .cart .bill .info-bill{
+    margin: 0 auto;
+    width: 90%;
+    height: fit-content;
+    background-color: rgba(180, 180, 180, 0.192);
+    padding: 25px 35px;
+    border-radius: 20px;
+}
+.content .container .cart .bill .info-bill .text-titl{
+    float: left;
+}
+.content .container .cart .bill .button{
+    width: 90%;
+    margin: 0 auto;
+}
+.content .container .cart .bill .button button{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+/* Thông tin đặt hàng */
+
+.require-cart{
+    display: none;
+}
+.close{
+    border: none;
+    border-radius: 15px;
+    background-color: #b02a37;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+.close:hover{
+    background-color: #dc3545;
+}
+
+/*  modal  */
+.table-donHang{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.container .thongtins{
+    margin: 15rem auto;
+    width: 50%;
+    padding: 0 10px!important;
+    position: relative;
+}
+.container .thongtins .info-donHang{
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Xác nhận */
+#xacnhandathang{
+    margin: 15rem auto;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .thongtins{
+        width: 70%;
+        font-size: 80%;
+    }
+    .container .thongtins h4{
+        font-size: 100%;
+    }
+    .container .thongtins button{
+        font-size: 80%;
+    }
+}
+@media (max-width: 391px) {
+    .container .thongtins{
+        width: 90%;
+        font-size: 80%;
+    }
+    .container .thongtins .info-donHang{
+        width: 100%;
+    }
+    #xacnhandathang h4{
+        font-size: 100%;
+    }
+}

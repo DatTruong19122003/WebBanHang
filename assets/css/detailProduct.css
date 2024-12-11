@@ -1,0 +1,59 @@
+.content{
+    width: 100%;
+}
+.content .product{
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    border-radius: 0.5rem;
+}
+.content .img-product{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.content .img-product img{
+    width: 90%;
+}
+
+/*  */
+.content .info-product {
+    width: 95%;
+    margin: 0 auto;
+}
+.content .info-product p{
+    margin: 0;
+}
+.content .info-product button{
+    margin: 0 auto;
+    color: #a54fa8;
+    border: solid 1px #a54fa8;
+    padding: 5px 25px;
+    border-radius: 0.5rem;
+    background-color: Transparent;
+    display: block;
+}
+.content .info-product button:hover{
+    background-color: #a54fa8;
+    color: white;
+}
+
+.content-footer .giaohang{
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+
+}
+.content-footer .giaohang .col-2{
+    margin: 0 auto;
+}
+.content-footer .giaohang .col-2 i{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+.content-footer .giaohang .giaohang-content h5{
+    font-size: 100%;
+}
+.content-footer .giaohang .giaohang-content{
+    font-size: 90%;
+}

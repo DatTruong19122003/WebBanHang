@@ -1,0 +1,50 @@
+.content .container h3{
+    color: #a54fa8;
+    padding-left: 2rem;
+    font-weight: 700;
+}
+.content .container .line{
+    height: 3px;
+    width: 23%;
+    background-color: #a54fa8;
+}
+.content .container .noidung{
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+.content .container .noidung .line{
+    margin: 0 auto;
+    height: 1px;
+    width: 95%;
+    background-color: #ececec;
+}
+.content .container .noidung .info .info-our{
+    margin: 1rem 0;
+}
+.content .container .noidung .info .info-our a{
+    color: black;
+}
+.content .container .noidung .ggmap .map{
+    width: 95%;
+    margin: 0 auto;
+    height: fit-content;
+}
+.content .container .noidung .ggmap .map iframe{
+    width: 100%;
+}
+
+
+/* responsive */
+@media (max-width: 767px) {
+    .content .container h3{
+        text-align: center;
+        padding-left: 0;
+    }
+    .content .container .line{
+        margin: 0 auto;
+        height: 3px;
+        width: 25%;
+        background-color: #a54fa8;
+    }
+}

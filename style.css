@@ -1,0 +1,412 @@
+body{
+    background-color: whitesmoke!important;
+    margin: 0!important;
+}
+.container-fluid{
+    padding: 0!important;
+}
+a{
+    text-decoration: none!important;
+}
+
+/* top header */
+header .top-head{
+    background-color: #a54fa8;
+    height: 2.5rem;
+    width: 100%;
+}
+header .top-head .row .col{
+    height: 2.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+header .top-head .row .login a{
+    position: relative;
+    bottom: 5px;
+}
+header .top-head .row .login a i{
+    font-size: 20px;
+}
+header .top-head .row .login a span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+header .top-head .row .col a{
+    color: white;
+    font-size: 15px;
+}
+header .top-head .row .info a{
+    padding: 0 10px;
+    float: right;
+}
+header .top-head .row .col a:hover{
+    color: lightcoral;
+}
+/* top header responsive */
+header .top-head .container .top-head-res i{
+    float: right;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    position: relative;
+    bottom: 0.2rem;
+    right: 0.5rem;
+    /* display: none; */
+}
+
+/* mid header */
+header .mid-head{
+    background-color: white;
+    height: 10rem;
+    width: 100%;
+}
+
+/* logo */
+.mid-head .container .row .logo{
+    position: relative;
+}
+.mid-head .container .row .logo img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* login url */
+
+#login_url{
+    color: white;
+    
+}
+
+/* box search */
+.mid-head .container .row .box-search{
+    height: 10rem;
+    float: left;
+    padding: 3.5rem 0;
+}
+.mid-head .container .row .box-search input{
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+    border-radius: 3rem;
+    border: solid 3px #a54fa8;
+    padding: 0 5rem 0 1.5rem;
+    background-color: white;
+}
+input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+    background-color: #f8fff9!important;
+}
+.mid-head .container .row .box-search button{
+    position: relative;
+    left: 9.5%;
+    float: right;
+    width: 4rem;
+    height: 2.2rem;
+    border-radius: 4rem;
+    border: none;
+    background-color: #a54fa8;
+    margin: 0.3rem;
+    bottom: 2.9rem;
+    right: 0.2rem;
+}
+.mid-head .container .row .box-search button i{
+    color: white;
+    font-size: 1.3rem;
+}
+.mid-head .container .row .box-search button:hover{
+    transform: scale(1.1,1.1);
+    border-color: #719ECE;
+    box-shadow: 0 0 5px #719ECE;
+}
+.mid-head .container .row .box-search button:hover i{
+    color: #ff8800;
+}
+
+/* cart */
+.mid-head .container .row .cart{
+    position: relative;
+    top: 3.5rem;
+    left: 20%;
+    height: 3rem;
+    width: 75%;
+    float: left;
+    border-radius: 3rem;
+    border: solid 3px #a54fa8;
+    padding: 0.1rem ;
+    background-color: white;
+}
+.mid-head .container .row .cart button{
+    position: relative;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: #a54fa8;
+    margin-left: 0.2rem;
+    margin-top: 1.5px;
+}
+.mid-head .container .row .cart button i{
+    color: white;
+    font-size: 1.3rem;
+}
+.mid-head .container .row .cart button:hover{
+    transform: scale(1.1,1.1);
+    border-color: #719ECE;
+    box-shadow: 0 0 5px #719ECE;
+}
+.mid-head .container .row .cart button:hover i{
+    color: #ff8800;
+}
+.mid-head .container .row .cart span{
+    position: relative;
+    bottom: 0.2rem;
+    font-size: 15px;
+}
+
+
+/* bot header */
+header .bot-head{
+    background-color: #a54fa8;
+    height: 3rem;
+    width: 100%;
+}
+/* menu second */
+.bot-head .container .row .menu-second{
+    background-color: lightcoral;
+    height: 3rem;
+}
+.bot-head .container .row .menu-second a{
+    font-size: 1rem;
+    color: white;  
+    font-weight: 600;
+    position: relative;
+    top: 0.6rem;
+    left: 1.5rem;
+}
+.bot-head .container .row .menu-second i{
+    font-size: 1rem;
+    position: relative;
+    top: 0.6rem;
+}
+.bot-head .container .row .menu-second:hover{
+    cursor: pointer;
+}
+.bot-head .container .row .menu-second:hover a{
+    color: #a54fa8;
+}
+
+.bot-head .container .row .menu-second .body-menu{
+    width: 108%;
+    position: relative;
+    right: 14%;
+    margin-top: 1.5rem;
+    z-index: 2;
+    display: none;
+
+}
+.bot-head .container .row .menu-second .body-menu ul li{
+    list-style-type: none;
+    height: 3rem;
+    width: 110.5%;
+    border-bottom: solid 1px #ced4da;
+    background-color: white;
+}
+.bot-head .container .row .menu-second .body-menu ul li a{
+    color: #333;
+}
+.bot-head .container .row .menu-second .body-menu ul li:hover a{
+    color: #ff8800;
+    z-index: 1!important;
+
+}
+.bot-head .container .row .menu-second:hover .body-menu{
+    display: block;
+}
+
+/* menu main */
+.bot-head .container .row .menu-main{
+    height: 3rem;
+    display: flex;
+}
+.bot-head .container .row .menu-main .menu{
+    position: relative;
+    top: 0rem;
+}
+.bot-head .container .row .menu-main .menu ul li{
+    float: left;
+    list-style-type: none;
+    margin: 0 2rem;
+    padding: 0.7rem;
+}
+.bot-head .container .row .menu-main .menu ul li a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #dfe2ea;
+    padding: 15px;
+    transition:  0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+.bot-head .container .row .menu-main .menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #dfe2ea;
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.bot-head .container .row .menu-main .menu ul li a:not(.is_active):hover:before{
+    opacity: 1;
+    bottom:0;
+}
+.bot-head .container .row .menu-main .menu ul li a:not(.is-active):hover{
+    color: white;
+}
+.nav-indicator{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: 0.4s;
+    height: 4px;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+}
+
+/* responsive menu */
+.bot-head .container .responsive-menu i{
+    width: 15%;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    bottom: 0.9rem;
+    left: 1rem;
+    display: none;
+}
+.bot-head .container .responsive-menu #menu-resp{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 1.5rem;
+    text-align: center;
+    z-index: 1;
+    display: none;
+}
+.bot-head .container .responsive-menu .menu .row{
+    font-weight: 600;
+    border-bottom: none;
+    border-top: none;
+    display: none;
+}
+.bot-head .container .responsive-menu:hover{
+    cursor: pointer;
+}
+.bot-head .container .responsive-menu .menu .row .col-md{
+    padding: 0.5rem 0;
+    background-color: white;
+    border-bottom: solid 1px #ced4da;
+}
+.bot-head .container .responsive-menu .menu .row a{
+    color: #333;
+}
+.bot-head .container .responsive-menu .menu .row .col-md:hover{
+    background-color: #ff8800;
+}
+.bot-head .container .responsive-menu .menu .row .col-md:hover a{
+    color: white;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #222222;
+    height: 30rem;
+    /* position: absolute;
+    bottom: 0; */
+}
+footer .container{
+    height: 100%;
+}
+footer .container .row{
+    padding-top: 4%;
+    height: 80%;
+}
+footer .container .row .col-md{
+    height: 100%;
+    /* background-color: cadetblue; */
+    margin: 0 1rem;
+}
+footer .container .row .col-md p{
+    color: #949494;
+    font-size: 1rem;
+}
+footer .container .row .col-md p a{
+    color: #949494;
+    font-size: 1rem;
+}
+footer .container .row .col-md h5{
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+}
+footer .container .row .footer1 img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+footer .container .row .footer2 .footer-info{
+    margin-bottom: 2rem;
+}
+footer .container .row .footer2 .footer-info p i{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+footer .container .row .footer2 .footer-icon-info a button{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    margin-right: 0.5rem;
+    background-color: #16aa6f;
+}
+footer .container .row .footer2 .footer-icon-info a button:hover{
+    background: #a54fa8;
+}
+footer .container .row .footer2 .footer-icon-info a button i{
+    color: white;
+}
+
+/* fanpage */
+footer .container .row .footer3 .fanpage{
+    width: 100%;
+} 
+
+
+
+
+/* coppyright */
+footer .container hr{
+    border: dotted 1px #949494;
+    border-style: none none dotted;
+}
+footer .container .footer-end{
+    height: 10%;
+    margin-top: 2%;
+}
+footer .container .footer-end span{
+    color: #949494;
+}
+footer .container .footer-end img{
+    float: right;
+}
+
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3H SHOP_Registration Account</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../assets/css/registration.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../reponsive.css">
+    <link rel="stylesheet" href="../assets/css/style-info.css">
+ 
+    
+
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="../JS/jquery/jquery-3.2.1.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="headder" style="background-color: white; height: 4rem; border-bottom: solid 1px #dddddd;">
+        <div class="topBar"></div>
+        <div class="container logo">
+            <a href="../Index.html">
+                <img src="../assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="container registration mt-5 mb-5">
+        <div class="content">
+            <div class="titl text-center">
+                <h4 style="color: white;"><b>Đăng ký tài khoản</b></h4>
+            </div>
+            <div class="info row mt-4">
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Họ & tên</p>
+                    <input type="text" id="hotend" placeholder="Trần Văn A">
+                    <div class="require-login require-name text-danger">
+                        Vui lòng nhập Họ & tên
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Tên đăng nhập</p>
+                    <input type="text" id="usernamed" placeholder="Nhập tên đăng nhập">
+                    <div class="require-login require-username text-danger">
+                        Vui lòng nhập tên đăng nhập
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Mật khẩu</p>
+                    <input type="text" id="passwordd" placeholder="Mật khẩu">
+                    <div class="require-login require-password text-danger">
+                        Vui lòng nhập mật khẩu
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Nhập lại mật khẩu</p>
+                    <input type="text" id="pass" placeholder="Mật khẩu">
+                    <div class="require-login require-pass text-danger">
+                        Vui lòng nhập lại mật khẩu
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Số điện thoại</p>
+                    <input type="text" id="sdtd" placeholder="+84">
+                    <div class="require-login require-sdt text-danger">
+                        Vui lòng nhập số điện thoại
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <p class="m-1">Email</p>
+                    <input type="text" id="emaild" placeholder="Email">
+                    <div class="require-login require-email text-danger">
+                        Vui lòng nhập email
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-3">
+                    <p class="m-1">Địa chỉ</p>
+                    <input type="text" id="addressd" placeholder="Địa chỉ">
+                    <div class="require-login require-address text-danger">
+                        Vui lòng nhập địa chỉ
+                    </div>
+                </div>
+            </div>
+            <button onclick="checkSignUp()">Đăng ký</button>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md footer1">
+                    <h5>ABOUT</h5>
+                    <a href="Index.html"><img src="../assets/img/logo2.png" alt="logo"></a>
+                    <p>Học cách yêu bản thân, đơn giản là sắm ngay một đôi giày mới, rồi chiêm ngưỡng hình ảnh mình thật chất, 
+                        thật phong cách. Tại sao không? Hãy để chúng mình giúp bạn lựa chọn đôi giày hoàn hảo nhé!
+                    </p>
+                </div>
+                <div class="col-md footer2">
+                    <h5>ADDRESS</h5>
+                    <div class="footer-info">
+                        <p>
+                            <a href="https://maps.app.goo.gl/u3quzUHSL2tvnJ3h6">
+                                <i class="bi bi-pin-map"></i>
+                                <span>140 Lê Trọng Tấn, Tân Phú, TP.HCM</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:0394105261">
+                                <i class="bi bi-telephone"></i>
+                                <span>+84 903358775</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:Abc123@donga.edu.vn">
+                                <i class="bi bi-envelope"></i>
+                                <span>3Hshop123@gmail.com</span>
+                            </a>
+                        </p>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            <span>Thứ hai - Thứ Bảy 6AM - 09:00 PM</span>
+                        </p>
+                    </div>
+                    <div class="footer-icon-info">
+                        <a href="https://www.facebook.com/profile.php?id=61569966976700">
+                            <button><i class="bi bi-facebook"></i></button>
+                        </a>
+                        <a href="https://www.instagram.com/3h.shop2024/profilecard/?igsh=aXlpc3diNG1lZXM=">
+                            <button><i class="bi bi-instagram"></i></button>
+                        </a>
+                        <a href="https://youtube.com/@3hshop?si=ztlaLm93QBTjdS5t">
+                            <button><i class="bi bi-youtube"></i></button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md footer3">
+                    <h5>LIKE & SUBCRIBE</h5>
+                    <div class="fanpage">
+                        
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-end">
+                <span><i>Copyright &copy; 3H SHOP</i></span>
+                <img src="../assets/img/cards-1.png" alt="pay">
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+    <script src="../JS/user.js"></script>
+</body>
+
+</html>

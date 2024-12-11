@@ -1,0 +1,86 @@
+body{
+    background-color: #efeee9!important;
+}
+
+header .topBar{
+    height: 1.5px;
+    background-color: #ff8800;
+}
+header .logo{
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+header .logo img{
+    height: 80%;
+    padding-top: 5px;
+}
+
+/* content */
+
+.registration{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.registration .content{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 700px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 33px;
+  
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.registration .content .titl{
+    width: 100%;
+    padding: 20px 0;
+    background-color: #37a0d0;
+}
+.registration .content .info{
+    padding: 0 55px;
+}
+.registration .content .info input{
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 8px #719ECE;
+    background-color: #f8fff9!important;
+}
+.registration .content button{
+    margin: 2rem auto 1rem;
+    display: block;
+    color: #a54fa8;
+    border: solid 1px #a54fa8;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+    background-color: Transparent;
+}
+.registration .content button:hover{
+    background-color: #a54fa8;
+    color: white;
+}
+
+@media (max-width: 320px) {
+    .registration .content .info{
+        padding: 0 25px;
+    }
+}
+
+.require-login{
+    display: none;
+}
