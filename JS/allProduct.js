@@ -11,29 +11,78 @@ product = productMan.concat(productWoman, productHandbag, productPerfume, produc
 
 localStorage.setItem('listProduct', JSON.stringify(product));
 
-var listLocalHandbag = function() {
+var listLocalHandbag = function () {
     var listHandbag = "";
-    for(var i in productHandbag) {
+    for (var i in productHandbag) {
         var data = JSON.parse(JSON.stringify(productHandbag[i]));
-        var listHandbag = '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 sanPham mb-4">';
-        listHandbag += '<div class="nd-sp">';
-        listHandbag += '<a href="#" class="proo" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">';
-        listHandbag += '<div class="img-sp mb-3">';
-        listHandbag += '<img src="./assets/img/'+ data.img +'" alt="hinh-anh-san-pham">';
-        listHandbag += '</div>';
-        listHandbag += '<div class="info-sp text-center">';
-        listHandbag += '<h5 class="name">'+ data.name +'</h5>';
-        listHandbag += '<p class="price" style="color: #ffb41d;"><del>'+ data.price_sale +'</del></p>';
-        listHandbag += '<p class="price-sale">'+ data.price +'</p>';
-        listHandbag += '</div>';
-        listHandbag += '</a>';
-        listHandbag += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
-        listHandbag += '</div>';
-        listHandbag += '</div>';
 
-        document.getElementById("productsHandbag").innerHTML += listHandbag;
+        // Tạo combo box cho size
+        var sizeOptions = '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) {
+            if (data.sizes[j].quantity > 0) {
+                sizeOptions +=
+                    '<option value="' +
+                    data.sizes[j].size +
+                    '">' +
+                    "Size: " +
+                    data.sizes[j].size +
+                    " (" +
+                    data.sizes[j].quantity +
+                    " sản phẩm)" +
+                    "</option>";
+            }
+        }
+        sizeOptions += "</select>";
+
+        // Render sản phẩm
+        listHandbag += '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 sanPham mb-4">';
+        listHandbag += '<div class="nd-sp">';
+        listHandbag +=
+            '<a href="#" class="proo" data-id="' +
+            data.id +
+            '" data-name="' +
+            data.name +
+            '" data-img="' +
+            data.img +
+            '" data-price="' +
+            data.price +
+            '" data-price-sale="' +
+            data.price_sale +
+            '">';
+        listHandbag += '<div class="img-sp mb-3">';
+        listHandbag +=
+            '<img src="./assets/img/' + data.img + '" alt="hinh-anh-san-pham">';
+        listHandbag += "</div>";
+        listHandbag += '<div class="info-sp text-center">';
+        listHandbag += "<h5 class='name'>" + data.name + "</h5>";
+        listHandbag +=
+            '<p class="price" style="color: #ffb41d;"><del>' +
+            data.price_sale +
+            "</del></p>";
+        
+        listHandbag += '<p class="price-sale">' + data.price + "</p>";
+        listHandbag += sizeOptions; // Thêm combobox chọn size
+        listHandbag += "</div>";
+        listHandbag += "</a>";
+        listHandbag +=
+            '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="' +
+            data.id +
+            '" data-name="' +
+            data.name +
+            '" data-img="' +
+            data.img +
+            '" data-price="' +
+            data.price +
+            '" data-price-sale="' +
+            data.price_sale +
+            '">Thêm vào giỏ hàng</button>';
+        listHandbag += "</div>";
+        listHandbag += "</div>";
     }
-}
+
+    document.getElementById("productsHandbag").innerHTML = listHandbag; // Cập nhật nội dung
+};
+
 listLocalHandbag();
 
 var listLocalPerfume = function() {
@@ -52,6 +101,12 @@ var listLocalPerfume = function() {
         listPerfume += '<p class="price-sale">'+ data.price +'</p>';
         listPerfume += '</div>';
         listPerfume += '</a>';
+        listPerfume += '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) { // Lặp qua các size của sản phẩm
+            var sizeData = data.sizes[j];
+            listPerfume += '<option value="' + sizeData.size + '">Size: ' + sizeData.size + ' (' + sizeData.quantity + ' sản phẩm)</option>';
+        }
+        listPerfume += '</select>';
         listPerfume += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
         listPerfume += '</div>';
         listPerfume += '</div>';
@@ -77,6 +132,12 @@ var listLocalHat = function() {
         listHat += '<p class="price-sale">'+ data.price +'</p>';
         listHat += '</div>';
         listHat += '</a>';
+        listHat += '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) { // Lặp qua các size của sản phẩm
+            var sizeData = data.sizes[j];
+            listHat += '<option value="' + sizeData.size + '">Size: ' + sizeData.size + ' (' + sizeData.quantity + ' sản phẩm)</option>';
+        }
+        listHat += '</select>';
         listHat += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
         listHat += '</div>';
         listHat += '</div>';
@@ -102,6 +163,12 @@ var listLocalShoe = function() {
         listShoe += '<p class="price-sale">'+ data.price +'</p>';
         listShoe += '</div>';
         listShoe += '</a>';
+        listShoe += '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) { // Lặp qua các size của sản phẩm
+            var sizeData = data.sizes[j];
+            listShoe += '<option value="' + sizeData.size + '">Size: ' + sizeData.size + ' (' + sizeData.quantity + ' sản phẩm)</option>';
+        }
+        listShoe += '</select>';
         listShoe += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
         listShoe += '</div>';
         listShoe += '</div>';

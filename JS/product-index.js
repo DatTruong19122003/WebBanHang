@@ -147,31 +147,92 @@ if (localStorage.getItem("femaleProduct") == null) {
     Save();
 }
 
-var listLocal = function() {
+var listLocal = function () {
     var listProduct = "";
-    for(var i in product) {
+    for (var i in product) {
         var data = JSON.parse(JSON.stringify(product[i]));
-        var listProduct = '<div class="item">';
+
+        // Tạo combobox cho size
+        var sizeOptions = '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) {
+            if (data.sizes[j].quantity > 0) {
+                sizeOptions +=
+                    '<option value="' +
+                    data.sizes[j].size +
+                    '">' +
+                    "Size: " +
+                    data.sizes[j].size +
+                    " (" +
+                    data.sizes[j].quantity +
+                    " sản phẩm)" +
+                    "</option>";
+            }
+        }
+        sizeOptions += "</select>";
+
+        // Render sản phẩm
+        listProduct += '<div class="item">';
         listProduct += '<a href="#">';
         listProduct += '<div class="card">';
         listProduct += '<div class="nd-sp">';
         listProduct += '<div class="img-sp mb-3">';
-        listProduct += '<a><img class="proo" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'" src="./assets/img/'+ data.img +'" alt="hinh-anh-san-pham">';
-        listProduct += '</div>';
+        listProduct +=
+            '<a><img class="proo" data-id="' +
+            data.id +
+            '" data-name="' +
+            data.name +
+            '" data-img="' +
+            data.img +
+            '" data-price="' +
+            data.price +
+            '" data-price-sale="' +
+            data.price_sale +
+            '" src="./assets/img/' +
+            data.img +
+            '" alt="hinh-anh-san-pham"></a>';
+        listProduct += "</div>";
         listProduct += '<div class="info-sp text-center">';
-        listProduct += '<a class="proo" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'"><h5 class="name">'+ data.name +'</h5></a>';
-        listProduct += '<p class="price" style="color: #ffb41d;"><del>'+ data.price_sale +'</del></p>';
-        listProduct += '<p class="price-sale">'+ data.price +'</p>';
-        listProduct += '</div>';
-        listProduct += '</div>';
-        listProduct += '</div>';
-        listProduct += '</a>';
-        listProduct += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
-        listProduct += '</div>';
-
-        document.getElementById("item").innerHTML += listProduct;
+        listProduct +=
+            '<a class="proo" data-id="' +
+            data.id +
+            '" data-name="' +
+            data.name +
+            '" data-img="' +
+            data.img +
+            '" data-price="' +
+            data.price +
+            '" data-price-sale="' +
+            data.price_sale +
+            '"><h5 class="name">' +
+            data.name +
+            "</h5></a>";
+        listProduct +=
+            '<p class="price" style="color: #ffb41d;"><del>' +
+            data.price_sale +
+            "</del></p>";
+        listProduct += '<p class="price-sale">' + data.price + "</p>";
+        listProduct += "</div>";
+        listProduct += "</div>";
+        listProduct += "</div>";
+        listProduct += "</a>";
+        listProduct += sizeOptions; // Thêm combobox chọn size
+        listProduct +=
+            '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="' +
+            data.id +
+            '" data-name="' +
+            data.name +
+            '" data-img="' +
+            data.img +
+            '" data-price="' +
+            data.price +
+            '" data-price-sale="' +
+            data.price_sale +
+            '">Thêm vào giỏ hàng</button>';
+        listProduct += "</div>";
     }
-    Save();
-}
+
+    document.getElementById("item").innerHTML = listProduct; // Cập nhật nội dung
+};
+
 listLocal();
 

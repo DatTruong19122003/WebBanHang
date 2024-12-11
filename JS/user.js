@@ -330,3 +330,72 @@ function logOut() {
     localStorage.setItem('signup', JSON.stringify(signinArr));
     window.location.href = '../Index.html';
 }
+
+
+function searchProduct() {
+    // Lấy dữ liệu sản phẩm từ localStorage
+    var productList = JSON.parse(localStorage.getItem('listProduct')) || [];
+
+    // Lấy giá trị từ ô input tìm kiếm
+    var searchValue = document.getElementById("search-input").value.trim().toLowerCase();
+
+    // Nếu ô tìm kiếm trống, không thực hiện tìm kiếm
+    if (!searchValue) {
+        alert("Vui lòng nhập từ khóa để tìm kiếm!");
+        return;
+    }
+
+    // Lọc danh sách sản phẩm theo từ khóa
+    var searchResults = productList.filter(product =>
+        product.name.toLowerCase().includes(searchValue) || // Tìm theo tên sản phẩm
+        product.id.toLowerCase().includes(searchValue) // Tìm theo mã sản phẩm
+    );
+
+    // Hiển thị kết quả tìm kiếm
+    displaySearchResults(searchResults);
+}
+
+// Hàm hiển thị kết quả tìm kiếm
+function displaySearchResults(results) {
+    var searchResultsContainer = document.getElementById("search-results"); // Phần tử để hiển thị kết quả
+    if (!searchResultsContainer) {
+        alert("Không tìm thấy phần tử để hiển thị kết quả!");
+        return;
+    }
+
+    // Nếu không có kết quả
+    if (results.length === 0) {
+        searchResultsContainer.innerHTML = "<p>Không tìm thấy sản phẩm nào.</p>";
+        return;
+    }
+
+    // Tạo nội dung HTML cho các kết quả hiển thị dạng hàng ngang
+    var output = "<div class='search-results-horizontal'>";
+    results.forEach(product => {
+        output += `
+            <div class="search-result-item" style="display: flex; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding: 10px 0;">
+                <!-- Hình ảnh -->
+                <div style="flex: 0 0 100px; margin-right: 15px;">
+                    <img src="./assets/img/${product.img}" alt="${product.name}" style="width: 100%; height: auto;">
+                </div>
+                <a href="#" class="proo" data-id="${product.id}" data-name="${product.name}" data-img="${product.img}" data-price="${product.price}" data-price-sale="${product.price_sale}">
+                
+                <!-- Thông tin sản phẩm -->
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-weight: bold;">Tên: ${product.name}</p>
+                    <p style="margin: 0;">Mã sản phẩm: ${product.id}</p>
+                    <p style="margin: 0; color: #ffb41d;"><del>${product.price_sale}₫</del></p>
+                    <p style="margin: 0; font-weight: bold;">Giá: ${product.price}₫</p>
+                </div>
+                </a>
+            </div>`;
+    });
+    output += "</div>";
+
+    // Gắn kết quả vào giao diện
+    searchResultsContainer.innerHTML = output;
+}
+
+document.querySelector(".box-search button").addEventListener("click", searchProduct);
+
+document.getElementById("search-input").addEventListener("input", searchProduct);

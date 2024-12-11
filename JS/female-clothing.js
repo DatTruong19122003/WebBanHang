@@ -15,6 +15,12 @@ var listLocal = function() {
         listProduct += '<p class="price-sale">'+ data.price +'</p>';
         listProduct += '</div>';
         listProduct += '</a>';
+        listProduct += '<select class="form-select select-size" data-id="' + data.id + '">';
+        for (var j in data.sizes) { // Lặp qua các size của sản phẩm
+            var sizeData = data.sizes[j];
+            listProduct += '<option value="' + sizeData.size + '">Size: ' + sizeData.size + ' (' + sizeData.quantity + ' sản phẩm)</option>';
+        }
+        listProduct += '</select>';
         listProduct += '<button class="mt-2 mb-3 add-to-cart add-cart" data-id="'+data.id+'" data-name="'+data.name+'" data-img="'+data.img+'" data-price="'+data.price+'" data-price-sale="'+data.price_sale+'">Thêm vào giỏ hàng</button>';
         listProduct += '</div>';
         listProduct += '</div>';
